@@ -10,22 +10,22 @@ class Movie {
 
     //Constructor method
     public function __construct($_name, $_vote, $_genre) {
-        $this -> name = $_name;
-        $this -> vote = $_vote;
-        $this -> genre = $_genre;
+        $this->name = $_name;
+        $this->vote = $_vote;
+        $this->genre = $_genre;
     }
 
     //Methods
     public function getNameMovie() {
-        return $this -> name;
+        return $this->name;
     }
 
     public function getVoteMovie() {
-        return $this -> vote;
+        return $this->vote;
     }
 
     public function getGenreMovie() {
-        return $this -> genre;
+        return $this->genre;
     }
 
 }

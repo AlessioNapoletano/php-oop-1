@@ -74,17 +74,17 @@ Creare un layout completo per stampare a schermo una lista di movies.
                 </h2>
 
                 <p>
-                    Nome: <?php echo $movie2 -> getNameMovie(); ?>
+                    Nome: <?php echo $movie2->getNameMovie(); ?>
                 </p>
 
                 <p>
-                    Voto: <?php echo $movie2 -> getVoteMovie(); ?>
+                    Voto: <?php echo $movie2->getVoteMovie(); ?>
                 </p>
 
                 <p>
                     Genere: 
                     <?php 
-                        foreach ($movie2 -> genre as $genre) {
+                        foreach ($movie2->genre as $genre) {
                             echo $genre . " ";
                         }
                     ?>
