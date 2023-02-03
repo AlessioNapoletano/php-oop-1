@@ -8,23 +8,11 @@ require_once __DIR__ . './db/db.php';
 <!DOCTYPE html>
 <html lang="en">
 
-<!--
-     è definita una classe ‘Movie’
-=> all'interno della classe sono dichiarate delle variabili d'istanza
-=> all'interno della classe è definito un costruttore
-=> all'interno della classe è definito almeno un metodo
-vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà
-Bonus 1:
-Modificare la classe Movie in modo che accetti piú di un genere.
-Bonus 2:
-Creare un layout completo per stampare a schermo una lista di movies.
- -->
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie</title>
+    <title>Movies</title>
 
 
     <link rel="icon" href="https://img.freepik.com/free-vector/flat-clapperboard-icon_1063-38.jpg">
@@ -40,69 +28,183 @@ Creare un layout completo per stampare a schermo una lista di movies.
 <body>
 
     <header>
-        <h1 class="text-center">
+        <h1 class="text-center text-light pt-2">
             Movies
         </h1>
-        <hr>
     </header>
 
-    <main>
+    <main class="py-5">
 
-        <div class="wrapper d-flex">
+        <div class="container-lg d-flex justify-content-center">
+            <div class="row">
+                <!-- Movie -->
+                <div class="col-4 mb-3">
 
-            <!--Movie -->
-            <div class="card me-3" style="width: 18rem;">
-                <img src="<?php echo $movie1->getCoverMovie() ?>
-                " alt="<?php $movie1->getNameMovie() ?>" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title text-center"><?php echo $movie1->getNameMovie(); ?></h5>
+                    <!--Movie -->
+                    <div class="card my-card me-3" style="width: 18rem;">
+                        <div class="wrapper-image">
+                            <img src="<?php echo $movie1->getCoverMovie() ?>
+                    " alt="<?php $movie1->getNameMovie() ?>" class="card-img-top">
+                        </div>
 
-                    <p class="card-text">
-                        <span class="fw-bold">Genere: </span>
-                        <?php foreach($movie1->genre as $genre) {
-                        echo $genre . " ";
-                    } ?>
-                    </p>
+                        <div class="card-body text-white">
+                            <h5 class="card-title text-center"><?php echo $movie1->getNameMovie(); ?></h5>
 
-                    <p class="card-text">
-                        <span class="fw-bold">Voto: </span>
-                        <?php echo $movie1->getVoteMovie(); ?>
-                    </p>
-                    
+                            <p class="card-text">
+                                <span class="fw-bold">Genere: </span>
+                                <?php foreach ($movie1->genre as $genre) {
+                                    echo $genre . " ";
+                                } ?>
+                            </p>
+
+                            <p class="card-text">
+                                <span class="fw-bold">Voto: </span>
+                                <?php echo $movie1->getVoteMovie(); ?>
+                            </p>
+
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Movie -->
+                <div class="col-4 mb-3">
+                    <div class="card my-card me-3" style="width: 18rem;">
+                        <div class="wrapper-image">
+                            <img src="<?php echo $movie2->getCoverMovie() ?>
+                    " alt="<?php $movie1->getNameMovie() ?>" class="card-img-top">
+                        </div>
+
+                        <div class="card-body text-white">
+                            <h5 class="card-title text-center"><?php echo $movie2->getNameMovie(); ?></h5>
+
+                            <p class="card-text">
+                                <span class="fw-bold">Genere: </span>
+                                <?php foreach ($movie2->genre as $genre) {
+                                    echo $genre . " ";
+                                } ?>
+                            </p>
+
+                            <p class="card-text">
+                                <span class="fw-bold">Voto: </span>
+                                <?php echo $movie2->getVoteMovie(); ?>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Movie -->
+                <div class="col-4 mb-3">
+                    <!--Movie -->
+                    <div class="card my-card">
+                        <div class="wrapper-image">
+                            <img src="<?php echo $movie3->getCoverMovie() ?>
+                    " alt="<?php $movie1->getNameMovie() ?>" class="card-img-top">
+                        </div>
+                        <div class="card-body text-white">
+                            <h5 class="card-title text-center"><?php echo $movie3->getNameMovie(); ?></h5>
+
+                            <p class="card-text">
+                                <span class="fw-bold">Genere: </span>
+                                <?php foreach ($movie3->genre as $genre) {
+                                    echo $genre . " ";
+                                } ?>
+                            </p>
+
+                            <p class="card-text">
+                                <span class="fw-bold">Voto: </span>
+                                <?php echo $movie3->getVoteMovie(); ?>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Movie -->
+                <div class="col-4 mb-3">
+                    <div class="card my-card">
+                        <div class="wrapper-image">
+                            <img src="<?php echo $movie4->getCoverMovie() ?>
+                    " alt="<?php $movie1->getNameMovie() ?>" class="card-img-top">
+                        </div>
+                        <div class="card-body text-white">
+                            <h5 class="card-title text-center"><?php echo $movie4->getNameMovie(); ?></h5>
+
+                            <p class="card-text">
+                                <span class="fw-bold">Genere: </span>
+                                <?php foreach ($movie4->genre as $genre) {
+                                    echo $genre . " ";
+                                } ?>
+                            </p>
+
+                            <p class="card-text">
+                                <span class="fw-bold">Voto: </span>
+                                <?php echo $movie4->getVoteMovie(); ?>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Movie -->
+                <div class="col-4 mb-3">
+                    <div class="card my-card">
+                        <div class="wrapper-image">
+                            <img src="<?php echo $movie5->getCoverMovie() ?>
+                    " alt="<?php $movie1->getNameMovie() ?>" class="card-img-top">
+                        </div>
+                        <div class="card-body text-white">
+                            <h5 class="card-title text-center"><?php echo $movie5->getNameMovie(); ?></h5>
+
+                            <p class="card-text">
+                                <span class="fw-bold">Genere: </span>
+                                  <?php foreach ($movie5->genre as $genre) {
+                                    echo $genre . " ";
+                                } ?>
+                            </p>
+
+                            <p class="card-text">
+                                <span class="fw-bold">Voto: </span>
+                                <?php echo $movie5->getVoteMovie(); ?>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Movie -->
+                <div class="col-4 mb-3">
+                    <div class="card my-card">
+                        <div class="wrapper-image">
+                            <img src="<?php echo $movie6->getCoverMovie() ?>
+                    " alt="<?php $movie1->getNameMovie() ?>" class="card-img-top">
+                        </div>
+                        <div class="card-body text-white">
+                            <h5 class="card-title text-center"><?php echo $movie6->getNameMovie(); ?></h5>
+
+                            <p class="card-text">
+                                <span class="fw-bold">Genere: </span>
+                                <?php foreach ($movie6->genre as $genre) {
+                                    echo $genre . " ";
+                                } ?>
+                            </p>
+
+                            <p class="card-text">
+                                <span class="fw-bold">Voto: </span>
+                                <?php echo $movie6->getVoteMovie(); ?>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
-            <!--Movie -->
-            <div class="card" style="width: 18rem;">
-                <img src="<?php echo $movie2->getCoverMovie() ?>
-                " alt="<?php $movie2->getNameMovie() ?>" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title text-center"><?php echo $movie2->getNameMovie(); ?></h5>
-
-                    <p class="card-text">
-                        <span class="fw-bold">Genere: </span>
-                        <?php foreach($movie2->genre as $genre) {
-                        echo $genre . " ";
-                    } ?>
-                    </p>
-
-                    <p class="card-text">
-                        <span class="fw-bold">Voto: </span>
-                        <?php echo $movie2->getVoteMovie(); ?>
-                    </p>
-                    
-                </div>
-            </div>
-
-
         </div>
-
-        <!--End Div Wrapper -->
-        </div>
-
-
-
-
     </main>
 
 </body>
