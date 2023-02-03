@@ -26,6 +26,8 @@ Creare un layout completo per stampare a schermo una lista di movies.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie</title>
 
+    <link rel="icon" href="https://img.freepik.com/free-vector/flat-clapperboard-icon_1063-38.jpg">
+
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
