@@ -1,6 +1,7 @@
 <?php
-    require_once __DIR__ . './models/Movie.php';
+require_once __DIR__ . './models/Movie.php';
 
+$movie1 = new Movie('Star Wars', 8, 'Adventure');
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +18,7 @@ Modificare la classe Movie in modo che accetti piú di un genere.
 Bonus 2:
 Creare un layout completo per stampare a schermo una lista di movies.
  -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,13 +39,28 @@ Creare un layout completo per stampare a schermo una lista di movies.
     </header>
 
     <main>
-        <?php 
-            $movie1 = new Movie('Star Wars', 8 , 'Adventure');
+        <div class="movie">
+            <h2>
+                Dati Film
+            </h2>
 
-            var_dump($movie1);
-        ?>
+            <p>
+                Nome: <?php echo $movie1->getNameMovie(); ?>           
+            </p>
+
+            <p>
+                Voto: <?php echo $movie1->getVoteMovie(); ?>           
+            </p>
+
+            <p>
+                Genere: <?php echo $movie1->getGenreMovie(); ?>           
+            </p>
+
+
+        </div>
+
     </main>
-    
+
 </body>
 
 </html>
