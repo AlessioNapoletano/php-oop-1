@@ -1,3 +1,8 @@
+<?php
+    require_once __DIR__ . './models/Movie.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,10 +22,27 @@ Creare un layout completo per stampare a schermo una lista di movies.
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 
 <body>
+
+    <header>
+        <h1 class="text-center">
+            Movies
+        </h1>
+        <hr>
+    </header>
+
+    <main>
+        <?php 
+            $movie1 = new Movie('Star Wars', 8 , 'Adventure');
+
+            var_dump($movie1);
+        ?>
+    </main>
     
 </body>
 
