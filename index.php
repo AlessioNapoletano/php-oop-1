@@ -1,8 +1,7 @@
 <?php
 require_once __DIR__ . './models/Movie.php';
 
-$movie1 = new Movie('Star Wars', 8, ['Adventure' , 'Fantasy']);
-$movie2 = new Movie('Harry Potter', 9 , 'Fantasy');
+require_once __DIR__ . './db/db.php';
 
 ?>
 
@@ -80,9 +79,14 @@ Creare un layout completo per stampare a schermo una lista di movies.
                     Voto: <?php echo $movie2 -> getVoteMovie(); ?>
                 </p>
 
-                <!-- <p>
-                    Genere: <?php echo $movie2 -> getGenreMovie(); ?>
-                </p> -->
+                <p>
+                    Genere: 
+                    <?php 
+                        foreach ($movie2 -> genre as $genre) {
+                            echo $genre . " ";
+                        }
+                    ?>
+                </p>
             </div>
 
             </div>

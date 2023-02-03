@@ -15,8 +15,10 @@ body {
 }
 
 .movie {
+    width: calc((100% / 3 ) - 1rem);
     border: 1px solid magenta;
     padding: 3rem;
+    margin-right: 1rem;
 }
 
 .d-flex {
