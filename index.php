@@ -2,6 +2,8 @@
 require_once __DIR__ . './models/Movie.php';
 
 $movie1 = new Movie('Star Wars', 8, 'Adventure');
+$movie2 = new Movie('Harry Potter', 9 , 'Fantasy');
+
 ?>
 
 <!DOCTYPE html>
@@ -39,25 +41,51 @@ Creare un layout completo per stampare a schermo una lista di movies.
     </header>
 
     <main>
-        <div class="movie">
+        <div class="wrapper d-flex">
+            <div class="movie">
+                <h2>
+                    Dati Film
+                </h2>
+
+                <p>
+                    Nome: <?php echo $movie1->getNameMovie(); ?>
+                </p>
+
+                <p>
+                    Voto: <?php echo $movie1->getVoteMovie(); ?>
+                </p>
+
+                <p>
+                    Genere: <?php echo $movie1->getGenreMovie(); ?>
+                </p>
+            </div>
+
+
+            <div class="movie">
             <h2>
-                Dati Film
-            </h2>
+                    Dati Film
+                </h2>
 
-            <p>
-                Nome: <?php echo $movie1->getNameMovie(); ?>           
-            </p>
+                <p>
+                    Nome: <?php echo $movie2 -> getNameMovie(); ?>
+                </p>
 
-            <p>
-                Voto: <?php echo $movie1->getVoteMovie(); ?>           
-            </p>
+                <p>
+                    Voto: <?php echo $movie2 -> getVoteMovie(); ?>
+                </p>
 
-            <p>
-                Genere: <?php echo $movie1->getGenreMovie(); ?>           
-            </p>
+                <p>
+                    Genere: <?php echo $movie2 -> getGenreMovie(); ?>
+                </p>
+            </div>
 
+            </div>
 
+            <!--End Div Wrapper -->
         </div>
+
+
+        
 
     </main>
 

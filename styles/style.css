@@ -6,6 +6,19 @@
     box-sizing: border-box;
 }
 
+body {
+    max-width: 1100px;
+    margin: 0 auto;
+}
 .text-center {
     text-align: center;
+}
+
+.movie {
+    border: 1px solid magenta;
+    padding: 3rem;
+}
+
+.d-flex {
+    display: flex;
 }
