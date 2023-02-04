@@ -8,13 +8,16 @@ class Movie {
     public $name;
     public $vote;
     public $genre;
+    public $description;
 
     //Constructor method
-    public function __construct($_cover, $_name, $_vote, $_genre) {
+    public function __construct($_cover, $_name, $_vote, $_genre, $_description) {
         $this->cover = $_cover;
         $this->name = $_name;
         $this->vote = $_vote;
         $this->genre = $_genre;
+        $this->description = $_description;
+
     }
 
     //Methods
@@ -32,6 +35,10 @@ class Movie {
 
     public function getGenreMovie() {
         return $this->genre;
+    }
+
+    public function getDescriptionMovie() {
+        return $this->description;
     }
 
 }
