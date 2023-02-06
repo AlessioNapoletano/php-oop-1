@@ -69,6 +69,12 @@ require_once __DIR__ . '/db/db.php';
                                 <?php echo $movie->getDescriptionMovie(); ?>
                             </p>
 
+                            <p class="card-text text-end">
+                                <span class="fw-bold">
+                                    <?php echo Movie::getType() ?>
+                                </span>
+                            </p>
+
                         </div>
                     </div>
                 </div>

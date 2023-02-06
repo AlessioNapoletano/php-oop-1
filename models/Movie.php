@@ -9,6 +9,7 @@ class Movie {
     public $vote;
     public $genre;
     public $description;
+    public static $type = "movie";
 
     //Constructor method
     public function __construct($_cover, $_name, $_vote, $_genre, $_description) {
@@ -39,6 +40,10 @@ class Movie {
 
     public function getDescriptionMovie() {
         return $this->description;
+    }
+
+    public static function getType() {
+        return self::$type;
     }
 
 }
